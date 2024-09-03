@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AR.js with Unity WebGL</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+    <!-- AR.js Scene -->
+    <a-scene embedded arjs>
+        <!-- AR Marker -->
+        <a-marker preset="hiro">
+            <!-- Unity WebGL Content -->
+            <a-entity position="0 0 0">
+                <iframe src="index.html" style="width: 100%; height: 100%; border: none;"></iframe>
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
